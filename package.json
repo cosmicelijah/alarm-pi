@@ -2,15 +2,22 @@
   "name": "alarm-pi",
   "version": "1.0.0",
   "description": "Alarm clock for running on a RPi",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "node build/index.js",
+    "start:dev": "nodemon src/index.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/express": "^5.0.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2"
   }
 }
